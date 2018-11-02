@@ -7,37 +7,43 @@
   Givhr Client
 </h1>
 
-Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need.
+## 🚀 Installation
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+1. **Install the Gatsby CLI & Yarn.**
 
-## 🚀 Quick start
+   ```sh
+   # install the Gatsby CLI globally
+   npm/npx install -g gatsby-cli
+   ```
 
-1.  **Create a Gatsby site.**
+2. **Start developing.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+   Navigate the cloned repo and start it up.
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter
-    ```
+   ```sh
+    # install dependencies
+    npm install
 
-1.  **Start developing.**
+   # run app in dev mode
+   npm run dev
 
-    Navigate into your new site’s directory and start it up.
+   # run docz
+   npm run docz <=== coming soon!
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+   # execute prodution build of app
+   npm run prod
 
-1.  **Open the source code and start editing!**
+   # serve production app
+   npm run server
+   ```
 
-    Your site is now running at `http://localhost:8000`!
+3. **Open the source code and start editing!**
 
-    \_Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).\_
+   Your site is now running at `http://localhost:3000`!
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+   \_Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).\_
+
+   Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
@@ -91,7 +97,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
