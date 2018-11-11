@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+interface Props {
+  name: string;
+}
 
-class Home extends Component {
-  private name = 'dallin';
+class Home extends Component<Props, {}> {
   render() {
-    return <div>{this.name}</div>;
+    return <div>{this.props.name}</div>;
   }
 }
 

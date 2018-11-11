@@ -8,6 +8,17 @@
     "url": "https://github.com/givhr/client"
   },
   "license": "MIT",
+   "scripts": {
+    "build": "gatsby build",
+    "prod": "npm run clean && gatsby build",
+    "dev": "gatsby develop -p 3000 -o",
+    "server": "gatsby serve -p 3000 -o",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf public && rm -rf .cache",
+    "lint": "prettier --write 'src/**/*.ts' 'src/**/*.tsx' && npm run type-check",
+    "type-check": "tsc --noEmit"
+  },
   "dependencies": {
     "gatsby": "^2.0.38",
     "gatsby-image": "^2.0.19",
@@ -21,15 +32,6 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "prod": "npm run clean && gatsby build",
-    "dev": "gatsby develop -p 3000 -o",
-    "server": "gatsby serve -p 3000 -o",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf public && rm -rf .cache"
   },
   "devDependencies": {
     "gatsby-plugin-tslint": "0.0.2",
