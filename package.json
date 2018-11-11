@@ -3,37 +3,47 @@
   "description": "Givhr Client",
   "version": "1.0.0",
   "author": "Dallin Parker <dallin.r.parker@gmail.com>",
-  "dependencies": {
-    "gatsby": "^2.0.38",
-    "gatsby-image": "^2.0.19",
-    "gatsby-plugin-manifest": "^2.0.7",
-    "gatsby-plugin-offline": "^2.0.11",
-    "gatsby-plugin-react-helmet": "^3.0.1",
-    "gatsby-plugin-sharp": "^2.0.11",
-    "gatsby-source-filesystem": "^2.0.7",
-    "gatsby-transformer-sharp": "^2.1.7",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-helmet": "^5.2.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/givhr/client"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
-  "scripts": {
+   "scripts": {
     "build": "gatsby build",
     "prod": "npm run clean && gatsby build",
     "dev": "gatsby develop -p 3000 -o",
     "server": "gatsby serve -p 3000 -o",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf public && rm -rf .cache"
+    "clean": "rm -rf public && rm -rf .cache",
+    "lint": "prettier --write 'src/**/*.ts' 'src/**/*.tsx' && npm run type-check",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gatsby": "^2.0.38",
+    "gatsby-image": "^2.0.19",
+    "gatsby-plugin-manifest": "^2.0.7",
+    "gatsby-plugin-offline": "^2.0.11",
+    "gatsby-plugin-react-helmet": "^3.0.1",
+    "gatsby-plugin-sharp": "^2.0.12",
+    "gatsby-plugin-typescript": "^2.0.1",
+    "gatsby-source-filesystem": "^2.0.7",
+    "gatsby-transformer-sharp": "^2.1.7",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "gatsby-plugin-tslint": "0.0.2",
+    "prettier": "^1.14.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/givhr/client"
-  }
+  "keywords": [
+    "Human Resource",
+    "Slack App"
+  ]
 }
