@@ -8,7 +8,7 @@
     "url": "https://github.com/givhr/client"
   },
   "license": "MIT",
-   "scripts": {
+  "scripts": {
     "build": "gatsby build",
     "prod": "npm run clean && gatsby build",
     "dev": "gatsby develop -p 3000 -o",
@@ -20,22 +20,22 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "gatsby": "^2.0.38",
-    "gatsby-image": "^2.0.19",
-    "gatsby-plugin-manifest": "^2.0.7",
-    "gatsby-plugin-offline": "^2.0.11",
+    "gatsby": "^2.0.45",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.8",
+    "gatsby-plugin-offline": "^2.0.13",
     "gatsby-plugin-react-helmet": "^3.0.1",
     "gatsby-plugin-sharp": "^2.0.12",
     "gatsby-plugin-typescript": "^2.0.1",
-    "gatsby-source-filesystem": "^2.0.7",
-    "gatsby-transformer-sharp": "^2.1.7",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "gatsby-plugin-tslint": "0.0.2",
-    "prettier": "^1.14.2",
+    "prettier": "^1.15.2",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-loader": "^3.5.4",
