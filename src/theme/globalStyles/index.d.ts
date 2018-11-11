@@ -1,6 +1,12 @@
 import { ThemeShadows } from './boxShadows';
 
-export type BoxShadows = ThemeShadows.card | ThemeShadows.horzNav | ThemeShadows.verNav;
+export type BoxShadows = ThemeShadows.card | ThemeShadows.horzNav | ThemeShadows.vertNav;
+
+export interface IBoxShadows {
+  boxShadowVerticleNav?: ThemeShadows.vertNav;
+  boxShadowHorizontalNav?: ThemeShadows.horzNav;
+  boxShadowCard?: ThemeShadows.card;
+}
 
 export type Reset = `
 * {

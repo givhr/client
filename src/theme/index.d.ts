@@ -1,9 +1,8 @@
-import { Colors } from './colors';
-import { BoxShadows } from './globalStyles';
+import { IBoxShadows } from './globalStyles';
 import { IColors } from './colors';
 
 import { PrimaryFont } from './fonts';
 
-export interface Theme extends IColors {
+export default interface ITheme extends IColors, IBoxShadows {
   font: PrimaryFont;
 }
