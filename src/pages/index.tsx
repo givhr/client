@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
+import Button from '../components/Button';
 
 const IndexPage: React.SFC = () => (
   <Fragment>
-    <h1>HELLO WORLD</h1>
-    <button>yo yo</button>
+    <Button height={'5vh'} width={'500px'}>
+      New Giveaway
+    </Button>
   </Fragment>
 );
 
