@@ -3,8 +3,7 @@ module.exports = {
     title: 'Givhr'
   },
   plugins: [
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-tslint',
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,9 +23,11 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/logo_sm.png' // This path is relative to the root of the site.
+        icon: 'src/assets/images/logo_sm.png' // This path is relative to the root of the site.
       }
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-tslint'
   ]
 };
