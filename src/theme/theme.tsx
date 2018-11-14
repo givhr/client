@@ -11,7 +11,7 @@ export const theme: ITheme = {
   inactiveGrey: ThemeColors.inactiveGrey,
   medGrey: ThemeColors.medGrey,
   pipeGrey: ThemeColors.pipeGrey,
-  boxShadowVerticleNav: ThemeShadows.vertNav,
+  boxShadowVerticalNav: ThemeShadows.vertNav,
   boxShadowHorizontalNav: ThemeShadows.horzNav,
   boxShadowCard: ThemeShadows.card
 };
