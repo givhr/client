@@ -1,0 +1,14 @@
+{
+  "config": {
+    "title": "Givhr",
+    "description": "Givhr Client",
+    "themeConfig": {},
+    "menu": [],
+    "ordering": "descending",
+    "version": "1.0.0",
+    "repository": "https://github.com/givhr/client",
+    "native": false,
+    "codeSandbox": true
+  },
+  "entries": {}
+}

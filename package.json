@@ -17,7 +17,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf public && rm -rf .cache",
     "lint": "prettier --write 'src/**/*.ts' 'src/**/*.tsx' && npm run type-check",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "dependencies": {
     "gatsby": "^2.0.45",
@@ -55,7 +57,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint --no-verify"
+      "pre-commit": "npm run lint"
     }
   }
 }
