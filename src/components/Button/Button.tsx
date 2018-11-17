@@ -19,7 +19,7 @@ export const Button = styled<IButton, 'button'>('button')`
     cursor: pointer;
     color: ${({ theme }) => theme.primary1};
     background: ${({ theme }) => theme.primary14};
-    transition: color 0.2s, background 0.2s, transform 0.2s;
+    transition: color 0.2s, background 0.1s, transform 0.2s;
     transform: scale(0.95);
   }
 `;
