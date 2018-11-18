@@ -5,6 +5,6 @@ import { IImage } from './types';
 export const Image = styled<IImage, 'img'>('img')`
   height: ${({ height }) => height};
   width: ${({ width }) => width};
-  padding-left: ${({ p }) => p};
-  margin-right: ${({ m }) => m};
+  padding-left: ${({ p }) => p && p};
+  margin-right: ${({ m }) => m && m};
 `;
