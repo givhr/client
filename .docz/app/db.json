@@ -15,14 +15,14 @@
   },
   "entries": {
     "src/components/Palette/Palette.mdx": {
-      "name": "Hello world",
+      "name": "Palette",
+      "menu": "Color Palette",
       "id": "3020cd5dfdcb81a4015a5a91aa4941c9",
       "filepath": "src/components/Palette/Palette.mdx",
       "link": "https://github.com/givhr/client/edit/master/src/components/Palette/Palette.mdx",
       "slug": "src-components-palette-palette",
       "route": "/src-components-palette-palette",
       "order": 0,
-      "menu": null,
       "headings": [
         {
           "depth": 1,
