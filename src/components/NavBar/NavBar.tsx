@@ -3,6 +3,7 @@ import styled from '../../theme/styledComponent';
 
 export const NavBar = styled<{ vert: boolean }, 'nav'>('nav')`
   display: flex;
+  position: absolute;
   align-items: center;
   width: ${({ vert }) => (vert ? '208px' : '100%')};
   height: ${({ vert }) => (vert ? `calc(${'100vh - 80px'})` : '80px')};
