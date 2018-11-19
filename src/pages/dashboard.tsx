@@ -6,7 +6,9 @@ import { Link } from '../components/Link';
 import { ThemeColors } from '../theme/colors/colors';
 import Button from '../components/Button';
 import { Card } from '../components/Card/Card';
-import { DashboardContainer } from '../Layouts/DashboardLayout/Layout';
+import Container from '../Layouts/DashboardLayout';
+import FormItem from '../components/FormItem';
+import { FormInput } from '../components/Input/Input';
 
 //Look into Prefixing gatsby package --- Chrome adds " / " to URL path
 const Dashboard: React.FunctionComponent = () => (
@@ -23,9 +25,12 @@ const Dashboard: React.FunctionComponent = () => (
         New Giveaway
       </Button>
     </NavBar>
-    <DashboardContainer>
-      <Card>Add Giveaway</Card>
-    </DashboardContainer>
+    <Container>
+      <FormItem active={true}>
+        <Card>Add Giveaway</Card>
+      </FormItem>
+      <FormInput />
+    </Container>
   </Fragment>
 );
 
