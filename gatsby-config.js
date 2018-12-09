@@ -3,6 +3,7 @@ module.exports = {
     title: 'Givhr'
   },
   plugins: [
+    'gatsby-plugin-page-transitions',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
