@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '../../theme/styledComponent';
 
 export const Card = styled.div`
