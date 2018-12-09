@@ -9,6 +9,7 @@ import { Link } from './src/components/Link';
 import { ThemeColors } from './src/theme/colors/colors';
 import Button from './src/components/Button';
 import DashboardContainer from './src/Layouts/DashboardLayout';
+import SurveyContainer from './src/Layouts/SurveyLayout';
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 export const wrapRootElement = ({ element }) => (
@@ -40,7 +41,12 @@ export const wrapPageElement = ({ element, props }) => {
           </NavBar>
         </PageTransition>
       )}
-      {props.location.pathname.match('/dashboard') && <DashboardContainer>{element}</DashboardContainer>}
+      {/* {props.location.pathname.match('/dashboard') && (
+        <DashboardContainer {...props}>{element}</DashboardContainer>
+      )} */}
+      {props.location.pathname.match('/dashboard/create-survey') && (
+        <SurveyContainer {...props}>{element}</SurveyContainer>
+      )}
     </Fragment>
   );
 };

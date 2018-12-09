@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
+import { SurveyCard } from '../../components/Card/SurveyCard/SurveyCard';
 
 const CreateSurvey: React.FunctionComponent = () => (
   <Fragment>
-    <div>HELLOW!!!</div>
+    <SurveyCard>Hello</SurveyCard>
   </Fragment>
 );
 
