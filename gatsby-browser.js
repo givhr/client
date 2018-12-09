@@ -22,7 +22,6 @@ export const wrapRootElement = ({ element }) => (
 );
 
 export const wrapPageElement = ({ element, props }) => {
-  console.log(props);
   return (
     <Fragment>
       <NavBar vert={false}>
@@ -41,12 +40,12 @@ export const wrapPageElement = ({ element, props }) => {
           </NavBar>
         </PageTransition>
       )}
-      {/* {props.location.pathname.match('/dashboard') && (
-        <DashboardContainer {...props}>{element}</DashboardContainer>
-      )} */}
       {props.location.pathname.match('/dashboard/create-survey') && (
         <SurveyContainer {...props}>{element}</SurveyContainer>
       )}
+      {/* {props.location.pathname.match('/dashboard') && (
+        <DashboardContainer {...props}>{element}</DashboardContainer>
+      )} */}
     </Fragment>
   );
 };
