@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '../../theme/styledComponent';
 /*const Palette: React.FunctionComponent<{ color: string }> = (props) => <div />;*/
 
-export const Palette = styled<{ color: string }, 'div'>('div')`
+export const Palette = styled.div<{ color: string }>`
   border-radius: 4px;
   background-color: red;
   height: 100px;

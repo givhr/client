@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import ReactDOM from 'react-dom';
 const modalRoot = document.getElementById('portal') as HTMLElement;
-
+//todo: make this into a HOOK?
 class Portal extends Component<{ children?: any }, {}> {
   public el: HTMLElement;
   constructor(props: any) {

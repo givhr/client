@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { IButton } from './types';
 
-export const Button = styled<IButton, 'button'>('button')`
+export const Button = styled.button<IButton>`
   color: ${({ theme }) => theme.primary14};
   background: ${({ theme }) => theme.primary1};
   height: ${({ height }) => height};
@@ -13,7 +13,7 @@ export const Button = styled<IButton, 'button'>('button')`
   align-items: center;
   border-radius: 5px;
   padding: 12px;
-  margin-top: ${({ m }) => m && m};
+  margin-top: ${({ m }) => m};
   border: none;
   outline: none;
   &:hover {
