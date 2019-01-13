@@ -56,10 +56,5 @@
   "keywords": [
     "Human Resource",
     "Slack App"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && git add ."
-    }
-  }
+  ]
 }
