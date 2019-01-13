@@ -9,7 +9,6 @@ import { Link } from './src/components/Link';
 import { ThemeColors } from './src/theme/colors/colors';
 import Button from './src/components/Button';
 import DashboardContainer from './src/Layouts/DashboardLayout';
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
@@ -21,7 +20,7 @@ export const wrapRootElement = ({ element }) => (
 );
 
 export const wrapPageElement = ({ element, props }) => {
-  console.log(props);
+  console.log('wrapPageElement PROPS: ', element);
   return (
     <Fragment>
       <NavBar vert={false}>
@@ -32,13 +31,11 @@ export const wrapPageElement = ({ element, props }) => {
         <Link to="">Templates (Coming Soon)</Link>
       </NavBar>
       {!props.location.pathname.match('/create-survey') && (
-        <PageTransition>
-          <NavBar vert={true}>
-            <Button height={'44px'} width={'150px'} m={'40px'}>
-              New Giveaway
-            </Button>
-          </NavBar>
-        </PageTransition>
+        <NavBar vert={true}>
+          <Button height={'44px'} width={'150px'} m={'40px'}>
+            New Giveaway
+          </Button>
+        </NavBar>
       )}
       {props.location.pathname.match('/dashboard') && <DashboardContainer>{element}</DashboardContainer>}
     </Fragment>

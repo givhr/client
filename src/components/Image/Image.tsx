@@ -2,7 +2,7 @@
 import styled from '../../theme/styledComponent';
 import { IImage } from './types';
 
-export const Image = styled<IImage, 'img'>('img')`
+export const Image = styled.img<IImage>`
   height: ${({ height }) => height};
   width: ${({ width }) => width};
   padding-left: ${({ p }) => p && p};

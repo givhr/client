@@ -1,6 +1,6 @@
 import styled from '../../theme/styledComponent';
 
-export const FormItem = styled<{ active: boolean }, 'div'>('div')`
+export const FormItem = styled.div<{ active: boolean }>`
   width: 100%;
   position: relative;
   padding: 20px 46px 8px 41px;
