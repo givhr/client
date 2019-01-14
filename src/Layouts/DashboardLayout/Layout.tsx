@@ -2,6 +2,7 @@ import styled from '../../theme/styledComponent';
 
 export const DashboardContainer = styled.section`
   position: absolute;
+  background: seashell;
   top: 80px;
   left: 208px;
   height: ${`calc(${'100vh - 80px'})`};

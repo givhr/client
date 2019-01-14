@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '../../theme/styledComponent';
 import { Link as GatsbyLink } from 'gatsby';
 

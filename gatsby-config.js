@@ -1,6 +1,10 @@
+const routes = require('./routes.ts');
+
 module.exports = {
   siteMetadata: {
-    title: 'Givhr'
+    title: 'Givhr',
+    testing: 'Dallin Parker',
+    routes: routes
   },
   plugins: [
     'gatsby-plugin-styled-components',
