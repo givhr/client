@@ -1,6 +1,6 @@
 import styled from '../../theme/styledComponent';
 
-export const NavBar = styled.nav<{ vert: boolean }>`
+export const NavContainer = styled.nav<{ vert?: boolean }>`
   display: flex;
   position: absolute;
   align-items: center;

@@ -8,7 +8,8 @@ export interface MainNavRoutes {
 }
 
 // ============= CREATE NAV ROUTES =================
-export type createGiveawayRoute = 'create-giveaway:step';
+export type createGiveawayRoute = 'create-giveaway';
+export const createGiveawayRoute: 'create-giveaway' = 'create-giveaway';
 export type generalInfoRoute = 'general-info';
 export type schedulingRoute = 'scheduling';
 export type buildSurveyRoute = 'build-survey';

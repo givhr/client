@@ -1,4 +1,13 @@
+import React from 'react';
 import styled from '../../theme/styledComponent';
+import { DashboardNav } from '../../routing/DashboardNav';
+
+export const DashboardLayout: React.FunctionComponent = ({ children }) => (
+  <>
+    <DashboardNav />
+    {children}
+  </>
+);
 
 export const DashboardContainer = styled.section`
   position: absolute;
