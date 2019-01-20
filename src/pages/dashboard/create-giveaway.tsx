@@ -11,10 +11,9 @@ const CreateSurvey: React.FunctionComponent = () => (
 export default CreateSurvey;
 
 const SurveyContainer = styled.section`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  top: 160px;
   width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
 `;

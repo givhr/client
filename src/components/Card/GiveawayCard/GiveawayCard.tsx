@@ -6,8 +6,5 @@ export const GiveawayCard = styled.section`
   border-radius: 8px;
   background-color: rgba(118, 87, 135, 0.9);
   padding: 16px;
-  box-shadow: ${({ theme }) => {
-    console.log(theme);
-    return theme.boxShadowGiveawayCard;
-  }};
+  box-shadow: ${({ theme }) => theme.boxShadowGiveawayCard};
 `;

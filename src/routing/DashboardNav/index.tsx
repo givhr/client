@@ -8,7 +8,7 @@ import { Link } from '../../components/Link';
 const DashboardNav: React.FunctionComponent = () => (
   <NavBar>
     <Image src={GivhrLogo} height={'42px'} p={'50px'} m={'75px'} />
-    <Link to="/dashboard" activeStyle={{ color: ThemeColors.primary14 }}>
+    <Link to="/dashboard" activeStyle={{ color: ThemeColors.primary14, fontWeight: 'bold' }}>
       Dashboard
     </Link>
     <Link to="">Templates (Coming Soon)</Link>
