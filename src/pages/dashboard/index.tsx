@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from '../../components/Link';
 import { Card } from '../../components/Card/Card';
-import DashboardNav from '../../routing/DashboardNav';
-import SideNav from '../../routing/SideNav';
 import DashboardContainer from '../../Layouts/DashboardLayout';
 
 //Look into Prefixing gatsby package --- Chrome adds " / " to URL path

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { IButton } from './types';
+import styled from '../../theme/styledComponent';
 
 export const Button = styled.button<IButton>`
   color: ${({ theme }) => theme.primary14};
