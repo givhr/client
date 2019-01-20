@@ -24,5 +24,6 @@ export const theme: ITheme = {
   primary17: ThemeColors.primary17,
   boxShadowVerticalNav: ThemeShadows.vertNav,
   boxShadowHorizontalNav: ThemeShadows.horzNav,
-  boxShadowCard: ThemeShadows.card
+  boxShadowCard: ThemeShadows.card,
+  boxShadowGiveawayCard: ThemeShadows.giveawayCard
 };

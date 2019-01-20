@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { IButton } from './types';
+import styled from '../../theme/styledComponent';
 
 export const Button = styled.button<IButton>`
   color: ${({ theme }) => theme.primary14};
@@ -20,8 +20,6 @@ export const Button = styled.button<IButton>`
     cursor: pointer;
     color: ${({ theme }) => theme.primary1};
     background: ${({ theme }) => theme.primary12};
-    transition: background 0.1s, transform 0.2s;
-    transform: scale(0.95);
-    transform-origin: center;
+    transition: background 0.2s, transform 0.2s;
   }
 `;

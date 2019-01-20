@@ -1,3 +1,4 @@
+// 'gatsby-plugin-offline',
 module.exports = {
   siteMetadata: {
     title: 'Givhr'
@@ -26,7 +27,6 @@ module.exports = {
         icon: 'src/assets/images/logo_sm.png' // This path is relative to the root of the site.
       }
     },
-    'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
     'gatsby-plugin-tslint'
   ]

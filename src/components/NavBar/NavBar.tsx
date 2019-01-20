@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '../../theme/styledComponent';
 
-export const NavBar = styled.nav<{ vert: boolean }>`
+export const NavBar = styled.nav<{ vert?: boolean }>`
   display: flex;
   position: absolute;
   align-items: center;
