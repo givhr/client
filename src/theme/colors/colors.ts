@@ -6,8 +6,10 @@ export enum ThemeColors {
   primary5 = '#D3D3D3',
   primary6 = '#B5B5B5',
   primary7 = '#888787',
+  //TODO: this fix the duplicate =====
   primary8 = '#5F5F5F',
   primary9 = '#5F5F5F',
+  //==================================
   primary10 = '#3E3E3E',
   primary11 = '#C8BCCF',
   primary12 = '#9981A5',

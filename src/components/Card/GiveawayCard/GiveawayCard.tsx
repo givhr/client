@@ -7,4 +7,5 @@ export const GiveawayCard = styled.section`
   background-color: rgba(118, 87, 135, 0.9);
   padding: 16px;
   box-shadow: ${({ theme }) => theme.boxShadowGiveawayCard};
+  display: flex;
 `;

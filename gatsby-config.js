@@ -4,6 +4,8 @@ module.exports = {
     title: 'Givhr'
   },
   plugins: [
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-tslint',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
@@ -12,6 +14,10 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/assets/images`
       }
+    },
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -26,8 +32,6 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/assets/images/logo_sm.png' // This path is relative to the root of the site.
       }
-    },
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-tslint'
+    }
   ]
 };

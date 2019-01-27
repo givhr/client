@@ -11,6 +11,7 @@ export interface IBoxShadows {
   boxShadowHorizontalNav?: ThemeShadows.horzNav;
   boxShadowCard?: ThemeShadows.card;
   boxShadowGiveawayCard?: ThemeShadows.giveawayCard;
+  boxShadowHR?: ThemeShadows.hr;
 }
 
 export type Reset = `

@@ -15,7 +15,7 @@
     "jsx-boolean-value": ["never"],
     "object-literal-sort-keys": false,
     "quotemark": [true, "single", "jsx-double"],
-    "no-implicit-dependencies": [true, "optional"]
+    "no-implicit-dependencies": [false, "optional"]
   },
   "rulesDirectory": []
 }
