@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.7.2",
-    "@types/react-dom": "^16.0.9",
+    "@types/react-dom": "^16.8.0",
     "@types/react-helmet": "^5.0.7",
     "@types/styled-components": "^4.0.3",
     "docz": "^0.12.9",
