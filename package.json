@@ -50,7 +50,7 @@
     "@types/react-dom": "^16.8.0",
     "@types/react-helmet": "^5.0.7",
     "@types/styled-components": "^4.0.3",
-    "cypress": "^3.1.5",
+    "cypress": "^3.2.0",
     "docz": "^0.12.9",
     "gatsby-plugin-tslint": "0.0.2",
     "husky": "^1.1.3",
