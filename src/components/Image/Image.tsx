@@ -7,4 +7,6 @@ export const Image = styled.img<IImage>`
   width: ${({ width }) => width};
   padding-left: ${({ p }) => p && p};
   margin-right: ${({ m }) => m && m};
+  position: absolute;
+  bottom: 10px;
 `;

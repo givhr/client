@@ -25,5 +25,6 @@ export const theme: ITheme = {
   boxShadowVerticalNav: ThemeShadows.vertNav,
   boxShadowHorizontalNav: ThemeShadows.horzNav,
   boxShadowCard: ThemeShadows.card,
-  boxShadowGiveawayCard: ThemeShadows.giveawayCard
+  boxShadowGiveawayCard: ThemeShadows.giveawayCard,
+  boxShadowHR: ThemeShadows.hr
 };

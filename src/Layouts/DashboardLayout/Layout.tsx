@@ -1,6 +1,7 @@
 import styled from '../../theme/styledComponent';
 
 export const DashboardContainer = styled.section`
+  border: 5px solid green;
   position: absolute;
   top: 80px;
   left: 208px;
