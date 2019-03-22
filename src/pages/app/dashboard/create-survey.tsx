@@ -56,7 +56,7 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
               />
               {inFocus === 'title' && (
                 <InputExample>
-                  <div>Need Examples?</div>
+                  <span>Need Examples?</span>
                   <ul>
                     <li>We need your feedback!</li>
                     <li>Weekly giveaway, win a $10 giveaway</li>
@@ -75,6 +75,19 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
                 onFocus={({ target }) => updateFocusedItem(target)}
                 onChange={({ target }) => updateFormData(target)}
               />
+              {inFocus === 'description' && (
+                <InputExample>
+                  <div>
+                    <span>Need Help?</span> Here are a few things to include:
+                  </div>
+                  <ul>
+                    <li>How do people enter your giveaway?</li>
+                    <li>What's required to enter?</li>
+                    <li>How many winners will there be?</li>
+                    <li>When does the giveaway end?</li>
+                  </ul>
+                </InputExample>
+              )}
             </FormItem>
           </form>
           <ImageWrapper>
