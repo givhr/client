@@ -44,7 +44,7 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
       <GiveawayCard>
         <InteractionWrap>
           <h1 style={{ height: '87px' }}>{title ? title : defaultTitle}</h1>
-          <form autoComplete="off">
+          <FormContainer autoComplete="off">
             <FormItem name="title" focused={inFocus === 'title'}>
               <FormInput
                 type="text"
@@ -89,10 +89,10 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
                 </InputExample>
               )}
             </FormItem>
-          </form>
-          <ImageWrapper>
-            <Image src={Logo} height={'42px'} />
-          </ImageWrapper>
+            <ImageWrapper>
+              <Image src={Logo} height={'42px'} />
+            </ImageWrapper>
+          </FormContainer>
         </InteractionWrap>
         <NavContainer>
           <div>
@@ -118,6 +118,11 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
 };
 
 export default CreateSurvey;
+
+const FormContainer = styled.form`
+  overflow: scroll;
+  max-height: 88%;
+`;
 
 const SurveyContainer = styled.section`
   top: 160px;

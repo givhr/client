@@ -1,6 +1,6 @@
 import styled from '../../theme/styledComponent';
 
-export const FormItem = styled.div<{ active: boolean; focused: boolean }>`
+export const FormItem = styled.div<{ name: string; focused: boolean }>`
   width: 100%;
   position: relative;
   min-height: 64px;
