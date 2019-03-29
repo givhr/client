@@ -7,7 +7,7 @@
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions;
   if (page.path.match(/^\/dashboard/)) {
-    if (page.path.match(/create-giveaway/)) {
+    if (page.path.match(/create-survey/)) {
       deletePage(page);
       createPage({
         ...page,

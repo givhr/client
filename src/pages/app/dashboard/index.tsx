@@ -4,7 +4,7 @@ import { Card } from '../../../components/Card/Card';
 import DashboardContainer from '../../../Layouts/DashboardLayout';
 import posed from 'react-pose';
 import { routePaths } from '../../../types/routing';
-import CreateSurvey from '././create-giveaway';
+import CreateSurvey from './create-survey';
 import { Router } from '@reach/router';
 
 //Look into Prefixing gatsby package --- Chrome adds " / " to URL path
@@ -26,22 +26,22 @@ const Dashboard: React.FunctionComponent<DashboardProps> = (props) => (
     <DashboardContainer>
       <ItemContainer>
         <Item key={'dallin'}>
-          <Link to="app/dashboard/create-giveaway">
+          <Link to="app/dashboard/create-survey/2343">
             <Card>Add Giveaway</Card>
           </Link>
         </Item>
         <Item key={'parker'}>
-          <Link to="app/dashboard/create-giveaway">
+          <Link to="app/dashboard/create-survey">
             <Card>Add Giveaway</Card>
           </Link>
         </Item>
         <Item key={'mikayda'}>
-          <Link to="app/dashboard/create-giveaway">
+          <Link to="app/dashboard/create-survey">
             <Card>Add Giveaway</Card>
           </Link>
         </Item>
         <Item key={'mills'}>
-          <Link to="app/dashboard/create-giveaway">
+          <Link to="app/dashboard/create-survey">
             <Card>Add Giveaway</Card>
           </Link>
         </Item>
