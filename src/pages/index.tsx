@@ -4,16 +4,31 @@ import { LandingPage } from '../Layouts/IndexLayout';
 import Image from '../components/Image';
 import GivhrLogo from '../assets/images/givhr_text_logo.png';
 import Button from '../components/Button';
-import { navigate } from 'gatsby';
+import { StaticQuery, graphql, navigate } from 'gatsby';
 
 const IndexPage: React.FunctionComponent = () => (
   <LandingPage>
-    <div>
-      <h1>
-        Welcome to <Image src={GivhrLogo} height={'42px'} p={'10px'} />
-      </h1>
-      <Button onClick={() => navigate('/app/dashboard', { state: { authed: false } })}>Dashboard</Button>
-    </div>
+    <StaticQuery
+      query={graphql`
+        query GivhrTest {
+          givhr {
+            surveys {
+              id
+              title
+            }
+          }
+        }
+      `}
+      render={({ givhr }) => {
+        console.log(givhr);
+        return givhr.surveys.map((survey) => (
+          <>
+            <div>ID: {survey.id}</div>
+            <div>TITLE: {survey.title}</div>
+          </>
+        ));
+      }}
+    />
   </LandingPage>
 );
 

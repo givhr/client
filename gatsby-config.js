@@ -32,6 +32,17 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/assets/images/logo_sm.png' // This path is relative to the root of the site.
       }
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        // This type will contain remote schema Query type
+        typeName: 'GIVHR',
+        // This is the field under which it's accessible
+        fieldName: 'givhr',
+        // URL to query from
+        url: 'https://givhr-api.herokuapp.com/graphql'
+      }
     }
   ]
 };
