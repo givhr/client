@@ -13,8 +13,8 @@ import { getSurveys, updateSurvey } from '../services/api';
 // );
 
 class IndexPage extends React.Component {
-  constructor() {
-    super();
+  constructor(props: any) {
+    super(props);
 
     this.state = {
       surveys: ['Nothing']
