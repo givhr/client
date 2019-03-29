@@ -5,7 +5,7 @@ import PrivateRouter from '../../components/PrivateRoute';
 import LoginPage from '../login';
 import Dashboard from './dashboard';
 import { routePaths } from '../../types/routing';
-import CreateSurvey from './dashboard/create-giveaway';
+import CreateSurvey from './dashboard/create-survey';
 import RouterWrap from '../../routing';
 
 const Layout = styled.section`
@@ -15,10 +15,10 @@ const Layout = styled.section`
 export const App = () => (
   <Layout>
     <Router>
-      <PrivateRouter path="/app/*">
-        <RouterWrap path="dashboard/*">
-          <Dashboard path="./" />
-          <CreateSurvey path="./create-survey" />
+      <PrivateRouter path="app/">
+        <RouterWrap path="dashboard/">
+          <Dashboard path="/" />
+          <CreateSurvey path="/create-survey/:surveyId" />
         </RouterWrap>
       </PrivateRouter>
     </Router>
