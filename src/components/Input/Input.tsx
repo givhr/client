@@ -20,14 +20,16 @@ export const FormInput: StyledComponent<'input', IInput> = styled.input`
   margin: 25px 0 0 40px;
   padding-left: 15px;
   border-radius: 2px;
-  &:focus {
+
+  &::focus {
     border-left: 3px solid ${({ theme }) => theme.primary14};
     transition: all 0.4s;
-  };
+  }
+
   &::placeholder {
-    color: ${({ theme }) => theme.primary5};
+    color: ${({ theme }) => theme.primary5};
     margin: 7px;
-  };
+  }
 `;
 
 export const InputExample: StyledComponent<'div', IInput> = styled.div`
