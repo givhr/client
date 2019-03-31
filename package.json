@@ -15,7 +15,7 @@
   "scripts": {
     "build": "gatsby build",
     "prod": "npm run clean && gatsby build",
-    "dev": "gatsby develop -p 3030 -o",
+    "dev": "NODE_ENV=dev gatsby develop -p 3030 -o",
     "start": "gatsby serve -p 3030 -o",
     "format": "prettier --write \"src/**/*.{ts,tsx,js}\"",
     "clean": "rm -rf public && rm -rf .cache",

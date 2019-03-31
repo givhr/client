@@ -6,6 +6,7 @@ import GivhrLogo from '../assets/images/givhr_text_logo.png';
 import Button from '../components/Button';
 import { getSurveys, updateSurvey } from '../services/api';
 import { connect } from 'react-redux';
+import { testAppAction } from '../state/actions/appActions/actions';
 
 // const IndexPage: React.FunctionComponent = () => (
 //   <LandingPage>
@@ -22,12 +23,17 @@ class IndexPage extends React.Component {
     };
   }
 
-  componentDidMount() {
-    // getSurveys();
-    updateSurvey(2, { title: 'dallin' });
-  }
+  // componentDidMount() {
+  //   // getSurveys();
+  //   updateSurvey(2, { title: 'dallin' });
+  // }
   render() {
-    return <div>Hello</div>;
+    console.log('PROPS: ', this.props);
+    return (
+      <Button height="auto" width="230px" onClick={() => this.props.dispatch(testAppAction(true))}>
+        Click
+      </Button>
+    );
   }
 }
 
