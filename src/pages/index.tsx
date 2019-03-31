@@ -27,8 +27,8 @@ class IndexPage extends React.Component {
   //   // getSurveys();
   //   updateSurvey(2, { title: 'dallin' });
   // }
+
   render() {
-    console.log('PROPS: ', this.props);
     return (
       <Button height="auto" width="230px" onClick={() => this.props.dispatch(testAppAction(true))}>
         Click
@@ -37,11 +37,6 @@ class IndexPage extends React.Component {
   }
 }
 
-const mapStateToProps = (state: any) => {
-  console.log('STATE: ', state);
-  return {
-    state
-  };
-};
+const mapStateToProps = (state: any) => ({ state });
 
 export default connect(mapStateToProps)(IndexPage);
