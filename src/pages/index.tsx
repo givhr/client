@@ -7,35 +7,17 @@ import Button from '../components/Button';
 import { getSurveys, updateSurvey } from '../services/api';
 import { connect } from 'react-redux';
 import { testAppAction } from '../state/actions/appActions/actions';
+import { Router } from '@reach/router';
+import PrivateRouter from '../components/PrivateRoute';
 
-// const IndexPage: React.FunctionComponent = () => (
-//   <LandingPage>
-//     <h1>Hello</h1>
-//   </LandingPage>
-// );
-
-class IndexPage extends React.Component {
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      surveys: ['Nothing']
-    };
-  }
-
-  // componentDidMount() {
-  //   // getSurveys();
-  //   updateSurvey(2, { title: 'dallin' });
-  // }
-
-  render() {
-    return (
-      <Button height="auto" width="230px" onClick={() => this.props.dispatch(testAppAction(true))}>
-        Click
-      </Button>
-    );
-  }
-}
+const IndexPage: React.FunctionComponent = (props) => {
+  console.log('PROPS: ', props);
+  return (
+    <LandingPage>
+      <h1>hello world</h1>
+    </LandingPage>
+  );
+};
 
 const mapStateToProps = (state: any) => ({ state });
 
