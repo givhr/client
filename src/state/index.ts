@@ -1,6 +1,6 @@
 import { rootReducer } from './reducers';
 import { createLogger } from 'redux-logger';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore as reduxCreateStore, applyMiddleware, compose } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 // View action logging in browser console
@@ -14,4 +14,5 @@ if (process.env.NODE_ENV === 'dev') {
   middleware = [...middleware, createLogger(loggerOptions)];
 }
 
-export const store = createStore(rootReducer, composeEnhancer(applyMiddleware(...middleware)));
+const createStore = () => reduxCreateStore(rootReducer, composeEnhancer(applyMiddleware(...middleware)));
+export default createStore;
