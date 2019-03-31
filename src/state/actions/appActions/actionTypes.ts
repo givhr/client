@@ -1,0 +1,1 @@
+export const APP_TEST_ACTION = 'APP_TEST_ACTION';

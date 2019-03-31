@@ -5,6 +5,7 @@ import Image from '../components/Image';
 import GivhrLogo from '../assets/images/givhr_text_logo.png';
 import Button from '../components/Button';
 import { getSurveys, updateSurvey } from '../services/api';
+import { connect } from 'react-redux';
 
 // const IndexPage: React.FunctionComponent = () => (
 //   <LandingPage>
@@ -30,4 +31,11 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage;
+const mapStateToProps = (state: any) => {
+  console.log('STATE: ', state);
+  return {
+    state
+  };
+};
+
+export default connect(mapStateToProps)(IndexPage);
