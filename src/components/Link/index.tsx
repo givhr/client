@@ -7,7 +7,7 @@ export const Link = styled(GatsbyLink)`
   line-height: 32px;
   text-decoration: none;
   color: ${({ theme }) => theme.primary6};
-  margin-right: 40px;
+  margin: 40px;
   &:active {
     color: white;
   }
