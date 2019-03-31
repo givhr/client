@@ -21,7 +21,7 @@ export const updateSurvey = (id: number, updates: any) => {
     .catch((err) => console.log('UPDATE SURVEY ERR >', err));
 };
 
-export const createSurvey = () => {
+export const createSurvey = (id, updates) => {
   axios
     .put(`${BASE_URL}/surveys/${id}`, updates)
     .then((data) => {

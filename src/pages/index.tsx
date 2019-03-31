@@ -5,6 +5,8 @@ import Image from '../components/Image';
 import GivhrLogo from '../assets/images/givhr_text_logo.png';
 import Button from '../components/Button';
 import { getSurveys, updateSurvey } from '../services/api';
+import { connect } from 'react-redux';
+import { testAppAction } from '../state/actions/appActions/actions';
 
 // const IndexPage: React.FunctionComponent = () => (
 //   <LandingPage>
@@ -13,21 +15,28 @@ import { getSurveys, updateSurvey } from '../services/api';
 // );
 
 class IndexPage extends React.Component {
-  constructor() {
-    super();
+  constructor(props: any) {
+    super(props);
 
     this.state = {
       surveys: ['Nothing']
     };
   }
 
-  componentDidMount() {
-    // getSurveys();
-    updateSurvey(2, { title: 'dallin' });
-  }
+  // componentDidMount() {
+  //   // getSurveys();
+  //   updateSurvey(2, { title: 'dallin' });
+  // }
+
   render() {
-    return <div>Hello</div>;
+    return (
+      <Button height="auto" width="230px" onClick={() => this.props.dispatch(testAppAction(true))}>
+        Click
+      </Button>
+    );
   }
 }
 
-export default IndexPage;
+const mapStateToProps = (state: any) => ({ state });
+
+export default connect(mapStateToProps)(IndexPage);
