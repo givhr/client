@@ -10,6 +10,7 @@ import { StyledComponent } from 'styled-components';
 //FIXME:  const Input = styled.input<IInput>`
 export const FormInput: StyledComponent<'input', IInput> = styled.input`
   color: ${({ theme }) => theme.primary8};
+  word-wrap:break-word;
   font-size: 20px;
   width: 90%;
   border: none;
@@ -40,6 +41,9 @@ export const InputExample: StyledComponent<'div', IInput> = styled.div`
   font-size: 14px;
   color: ${({ theme }) => theme.primary8};
   border-radius: 4px;
+  span {
+    font-weight: bold;
+  }
   ul {
     li:before {
       content: '- ';

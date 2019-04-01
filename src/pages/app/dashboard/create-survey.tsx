@@ -44,7 +44,7 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
       <GiveawayCard>
         <InteractionWrap>
           <h1 style={{ height: '87px' }}>{title ? title : defaultTitle}</h1>
-          <form autoComplete="off">
+          <FormContainer autoComplete="off">
             <FormItem name="title" focused={inFocus === 'title'}>
               <FormInput
                 type="text"
@@ -56,7 +56,7 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
               />
               {inFocus === 'title' && (
                 <InputExample>
-                  <div>Need Examples?</div>
+                  <span>Need Examples?</span>
                   <ul>
                     <li>We need your feedback!</li>
                     <li>Weekly giveaway, win a $10 giveaway</li>
@@ -75,11 +75,24 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
                 onFocus={({ target }) => updateFocusedItem(target)}
                 onChange={({ target }) => updateFormData(target)}
               />
+              {inFocus === 'description' && (
+                <InputExample>
+                  <div>
+                    <span>Need Help?</span> Here are a few things to include:
+                  </div>
+                  <ul>
+                    <li>How do people enter your giveaway?</li>
+                    <li>What's required to enter?</li>
+                    <li>How many winners will there be?</li>
+                    <li>When does the giveaway end?</li>
+                  </ul>
+                </InputExample>
+              )}
             </FormItem>
-          </form>
-          <ImageWrapper>
-            <Image src={Logo} height={'42px'} />
-          </ImageWrapper>
+            <ImageWrapper>
+              <Image src={Logo} height={'42px'} />
+            </ImageWrapper>
+          </FormContainer>
         </InteractionWrap>
         <NavContainer>
           <div>
@@ -105,6 +118,11 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
 };
 
 export default CreateSurvey;
+
+const FormContainer = styled.form`
+  overflow: scroll;
+  max-height: 88%;
+`;
 
 const SurveyContainer = styled.section`
   top: 160px;
