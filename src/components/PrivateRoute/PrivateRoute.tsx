@@ -1,6 +1,5 @@
 import React from 'react';
 import { navigate } from 'gatsby';
-import { Router } from '@reach/router';
 import Dashboard from '../../pages/app/dashboard';
 
 interface PrivateRouterProps {
@@ -12,6 +11,6 @@ export const PrivateRouter: React.FunctionComponent<PrivateRouterProps> = ({ ...
   //   navigate(`login`, { replace: true });
   //   return null;
   // }
-  console.log('checking privacy');
+  console.log('checking privacy', props);
   return <>{props.children}</>;
 };

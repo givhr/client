@@ -1,5 +1,5 @@
 // tslint:disable:jsx-no-lambda
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from '../../../components/Image';
 import Button from '../../../components/Button';
 import styled from '../../../theme/styledComponent';
@@ -8,6 +8,8 @@ import { routePaths } from '../../../types/routing';
 import Logo from '../../../assets/images/logo_lg.png';
 import { FormInput, InputExample } from '../../../components/Input/Input';
 import { GiveawayCard } from '../../../components/Card/GiveawayCard/GiveawayCard';
+import { FormDropDown } from '../../../components/FormDropDown';
+import { getChannels, createSurvey } from '../../../services/api';
 
 interface CreateSurveyProps {
   path: routePaths;
@@ -20,8 +22,29 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
+    slackChannelId: null,
+    channelOptions: [],
+    selectedChannel: 'general',
+    winnerCount: 1,
     inFocus: null
   });
+
+  // const [selected, setOptions] = useState({ select: 'general', options: [] });
+
+  useEffect(() => {
+    const fetchChannels = async () => {
+      // const { id, channels } = await getChannels();
+      const { channels } = await getChannels();
+      console.log('CHANNELS: ', channels[0].id);
+      setFormData({
+        ...formData,
+        selectedChannel: `#${channels[0].name}`,
+        channelOptions: channels,
+        slackChannelId: channels[0].id
+      });
+    };
+    fetchChannels();
+  }, []);
 
   // const [formItemFocus, setFormItemFocus] = useState()
 
@@ -38,7 +61,15 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
       [name]: value
     });
 
-  const { title, description, inFocus } = formData;
+  const submitForm = () => {
+    const { slackChannelId, title, description, winnerCount } = formData;
+    console.log();
+    const survey = { slack_channel_id: slackChannelId, title, description, winner_count: 1 };
+    console.log('Survery being submitted: ', survey);
+    createSurvey(survey);
+  };
+
+  const { title, description, inFocus, channelOptions, selectedChannel } = formData;
   return (
     <SurveyContainer>
       <GiveawayCard>
@@ -76,6 +107,27 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
                 onChange={({ target }) => updateFormData(target)}
               />
             </FormItem>
+            <FormItem>
+              <FormDropDown
+                title="Where would you like to post your giveaway?"
+                selected={selectedChannel}
+                options={channelOptions}
+              />
+              <FormDropDown
+                title="Select the number of winners"
+                selected={'Select Number'}
+                options={[{ id: 1, name: 1 }]}
+              />
+              {/* <select
+                  name="channel"
+                  value={selectedChannel}
+                  onChange={({ target }) => updateFormData(target)}>
+                  <option value="grapefruit">Grapefruit</option>
+                  <option value="lime">Lime</option>
+                  <option value="coconut">Coconut</option>
+                  <option value="mango">Mango</option>
+                </select> */}
+            </FormItem>
           </form>
           <ImageWrapper>
             <Image src={Logo} height={'42px'} />
@@ -90,7 +142,7 @@ const CreateSurvey: React.FunctionComponent<CreateSurveyProps> = () => {
             <h3>5. Preview Survey</h3>
           </div>
           <ButtonContainer>
-            <Button height="auto" width="230px">
+            <Button height="auto" width="230px" onClick={() => submitForm()}>
               Next
             </Button>
             <Button height="auto" width="230px" m="16px">
