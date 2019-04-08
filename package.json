@@ -58,7 +58,7 @@
     "@types/react-redux": "^7.0.6",
     "@types/redux": "^3.6.0",
     "@types/redux-logger": "^3.0.7",
-    "@types/styled-components": "^4.0.3",
+    "@types/styled-components": "^4.1.13",
     "cypress": "^3.1.5",
     "docz": "^0.13.7",
     "gatsby-plugin-tslint": "0.0.2",
