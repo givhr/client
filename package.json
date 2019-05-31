@@ -48,7 +48,7 @@
     "react-pose": "^4.0.6",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.1"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
