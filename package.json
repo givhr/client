@@ -63,7 +63,7 @@
     "docz": "^1.2.0",
     "gatsby-plugin-tslint": "0.0.2",
     "husky": "^2.4.0",
-    "prettier": "^1.17.1",
+    "prettier": "^1.18.0",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "start-server-and-test": "^1.9.1",
