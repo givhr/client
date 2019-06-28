@@ -59,7 +59,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-logger": "^3.0.7",
     "@types/styled-components": "^4.1.16",
-    "cypress": "^3.3.1",
+    "cypress": "^3.3.2",
     "docz": "^1.2.0",
     "gatsby-plugin-tslint": "0.0.2",
     "husky": "^2.6.0",
